@@ -1,0 +1,141 @@
+/* Root and dark mode */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom right, #cfe2ff, #dbeafe);
+    transition: background-color 0.3s ease;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    body {
+      background: linear-gradient(to bottom right, #111827, #1f2937);
+    }
+  
+    .login-card {
+      background-color: #111827;
+      color: white;
+      border: 1px solid #374151;
+    }
+  
+    .login-subtitle,
+    .login-footer {
+      color: #9ca3af;
+    }
+  
+    .link:hover {
+      color: #d1d5db;
+    }
+  }
+  
+  /* Container */
+  .login-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  /* Card */
+  .login-card {
+    width: 380px;
+    height: 500px;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #e5e7eb;
+  }
+  
+  /* Text */
+  .login-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+  }
+  
+  .highlight {
+    color: #4f46e5;
+  }
+  
+  .login-subtitle {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-bottom: 2rem;
+  }
+  
+  .login-footer {
+    font-size: 0.75rem;
+    color: #9ca3af;
+    line-height: 1.4;
+  }
+  
+  .link {
+    text-decoration: underline;
+    cursor: pointer;
+    color: inherit;
+  }
+  
+  .link:hover {
+    color: #4b5563;
+  }
+  
+  /* Buttons */
+  .login-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: background 0.2s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .github-btn {
+    background-color: #111827;
+  }
+  
+  .github-btn:hover {
+    background-color: #1f2937;
+  }
+  
+  .google-btn {
+    background-color: #ef4444;
+  }
+  
+  .google-btn:hover {
+    background-color: #dc2626;
+  }
+  
+  .icon {
+    font-size: 1.2rem;
+  }
+  /* Animation */
+@keyframes spin-slow {
+    0% {
+      transform: rotateY(0deg);
+    }
+    100% {
+      transform: rotateY(360deg);
+    }
+  }
+  
+  .spinning {
+    animation: spin-slow 1.0s linear infinite;
+    transform-style: preserve-3d;
+  }

@@ -1,0 +1,49 @@
+# Node modules
+node_modules/
+.env
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Runtime
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Build files
+/build
+/dist
+
+# IDEs and editors
+.vscode/
+.idea/
+
+# React specific
+*.env.local
+*.env.development.local
+*.env.test.local
+*.env.production.local
+
+# Optional npm cache directory
+.npm
+
+# Coverage directory used by testing tools
+coverage/
+
+# Mac system files
+*.DS_Store
+
+# Local databases
+*.sqlite
+*.db
+
+# Misc
+*.tgz
+*.gz
