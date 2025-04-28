@@ -5,14 +5,13 @@ const jwt = require('jsonwebtoken');
 const authController = require('../controllers/authController');
 const authenticate = require('../middleware/authMiddleware');
 
-// 🟢 Your existing routes
 router.post('/register', authController.register);
 router.post('/login', authController.login);
 router.get('/profile', authenticate, (req, res) => {
   res.json({ message: `Hello ${req.user.email}, this is a protected route.` });
 });
 
-// 🟣 GitHub OAuth Routes
+// GitHub OAuth Routes
 
 // Redirect user to GitHub for authentication
 router.get('/github', passport.authenticate('github', { scope: [ 'user:email' ] }));
