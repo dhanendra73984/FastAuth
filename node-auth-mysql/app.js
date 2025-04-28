@@ -3,14 +3,14 @@ const cors = require('cors');
 const session = require('express-session');
 const passport = require('passport');
 require('dotenv').config();
-require('./config/passport'); // 👈 Load GitHub strategy
+require('./config/passport'); 
 
 const authRoutes = require('./routes/authRoutes');
 
 const app = express();
 
 app.use(cors({
-  origin: 'http://localhost:5173', // 👈 your frontend origin
+  origin: 'http://localhost:5173', 
   credentials: true,
 }));
 
@@ -28,7 +28,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Routes
-app.use('/api/auth', authRoutes); // 👈 Ensure this path matches your GitHub URL
+app.use('/api/auth', authRoutes); 
 
 app.get('/', (req, res) => {
     res.send('🚀 Auth server is running...');
