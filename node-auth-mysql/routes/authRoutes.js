@@ -12,6 +12,7 @@ router.get('/profile', authenticate, (req, res) => {
 });
 
 // GitHub OAuth Routes
+//authentication with jwt github and Oauth
 
 // Redirect user to GitHub for authentication
 router.get('/github', passport.authenticate('github', { scope: [ 'user:email' ] }));
